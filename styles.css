@@ -96,7 +96,7 @@ html {
 }
 
 .single-note {
-  width: 300px;
+  width: 32rem;
   padding: 2.8rem;
   margin: 2.4rem;
   background-color: #d0ebff;
@@ -111,4 +111,109 @@ html {
   font-size: 1.4rem;
   line-height: 1.4;
   text-align: justify;
+}
+
+/* MODAL SET */
+
+.modal-window {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+form label {
+  font-size: 1.8rem;
+  font-family: inherit;
+}
+
+form input {
+  width: 50%;
+  padding: 0.5rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  border-color: #b197fc;
+  box-shadow: 0 0 5px rgba(176, 151, 252, 0.8);
+  outline: none;
+}
+
+form textarea {
+  width: 50%;
+  padding: 0.5rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #b197fc;
+  box-shadow: 0 0 5px rgba(176, 151, 252, 0.8);
+  outline: none;
+}
+.submit-note {
+  width: 12rem;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: 1.6rem;
+
+  margin: 0.8rem;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fa5252;
+  color: #fff;
+  border-radius: 50%;
+
+  transition: all 0.2s ease;
+
+  cursor: pointer;
+}
+
+.btn-close:hover {
+  background-color: #c92a2a;
 }

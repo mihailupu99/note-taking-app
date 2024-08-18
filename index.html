@@ -47,6 +47,35 @@
           </p>
         </div>
       </div>
+
+      <div class="modal-section">
+        <div class="modal-window">
+          <div class="modal-content">
+            <span class="btn-close"
+              ><i class="fa-solid fa-x close-icon"></i
+            ></span>
+            <form action="" class="new-note">
+              <div class="form-field">
+                <label for="note-title">Note title:</label>
+                <input type="text" name="note-title" id="note-title" required />
+              </div>
+              <div class="form-field">
+                <label for="note-text">Note content:</label>
+                <textarea
+                  name="note-text"
+                  id="note-text"
+                  rows="5"
+                  cols="30"
+                  placeholder="Write your note here..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn submit-note">
+                <i class="fa-solid fa-circle-plus btn-icon"></i>Add note
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <script src="script.js"></script>
   </body>
