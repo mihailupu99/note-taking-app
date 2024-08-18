@@ -3,10 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/39f57eda6b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Note taking app</title>
   </head>
   <body>
+    <section class="app-area">
+      <div class="sidebar-menu">
+        <h1 class="heading-primary">Note taking app</h1>
+        <nav>
+          <div class="search-container">
+            <input
+              type="text"
+              placeholder="Search notes..."
+              class="search-input"
+            />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+          <div class="button-container">
+            <button class="btn new-note">
+              <i class="fa-solid fa-book-open btn-icon"></i>New note
+            </button>
+            <button class="btn categories">
+              <i class="fa-solid fa-list btn-icon"></i>Categories
+            </button>
+            <button class="btn new-note">
+              <i class="fa-solid fa-calendar btn-icon"></i>Calendar
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="notes-area">
+        <div class="single-note">
+          <h2 class="heading-secondary">Note title</h2>
+          <p class="note-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
+            aspernatur asperiores rem dignissimos voluptas, inventore accusamus
+            esse provident dolor consequuntur beatae temporibus deserunt nihil
+            voluptate facere. Quae nesciunt obcaecati tempora.
+          </p>
+        </div>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

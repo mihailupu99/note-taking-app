@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Colors:
+#495057
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Noto Sans";
+  font-size: 62.5%;
+  color: #495057;
+}
+
+.app-area {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar-menu {
+  height: 100vh;
+  width: 270px;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2.4rem 1.2rem;
+  border-right: 2px solid black;
+}
+
+.heading-primary {
+  font-size: 2.8rem;
+  padding-bottom: 2.4rem;
+}
+
+.search-container {
+  position: relative;
+  width: 70%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #b197fc;
+  box-shadow: 0 0 5px rgba(176, 151, 252, 0.8);
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+
+  pointer-events: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.4rem 0;
+  gap: 0.8rem;
+}
+
+.btn {
+  width: 70%;
+
+  padding: 0.4rem 1.2rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  text-align: left;
+  background-color: #fff;
+  color: #343a40;
+  border-radius: 10px;
+  border: none;
+  background-color: #e5dbff;
+}
+
+.btn-icon {
+  font-size: 1.4rem;
+  padding-right: 0.4rem;
+}
+
+.single-note {
+  width: 300px;
+  padding: 2.8rem;
+  margin: 2.4rem;
+  background-color: #d0ebff;
+}
+
+.heading-secondary {
+  font-size: 2.8rem;
+  padding-bottom: 1.2rem;
+}
+
+.note-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: justify;
+}
