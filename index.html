@@ -12,9 +12,9 @@
   </head>
   <body>
     <section class="app-area">
-      <div class="sidebar-menu">
+      <div class="sidebar">
         <h1 class="heading-primary">Note taking app</h1>
-        <nav>
+        <nav class="navigation-menu">
           <div class="search-container">
             <input
               type="text"
@@ -24,13 +24,13 @@
             <i class="fa-solid fa-magnifying-glass search-icon"></i>
           </div>
           <div class="button-container">
-            <button class="btn new-note">
+            <button class="btn new-note underline-hover">
               <i class="fa-solid fa-book-open btn-icon"></i>New note
             </button>
-            <button class="btn categories">
+            <button class="btn categories underline-hover">
               <i class="fa-solid fa-list btn-icon"></i>Categories
             </button>
-            <button class="btn new-note">
+            <button class="btn new-note underline-hover">
               <i class="fa-solid fa-calendar btn-icon"></i>Calendar
             </button>
           </div>
@@ -39,6 +39,7 @@
       <div class="notes-area">
         <div class="single-note">
           <h2 class="heading-secondary">Note title</h2>
+          <span class="note-date">24/07/2024</span>
           <p class="note-text">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
             aspernatur asperiores rem dignissimos voluptas, inventore accusamus

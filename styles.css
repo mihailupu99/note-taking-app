@@ -23,18 +23,25 @@ html {
   flex-direction: row;
 }
 
-.sidebar-menu {
-  height: 100vh;
+.sidebar {
+  height: calc(100vh - 2.4rem);
   width: 270px;
   display: flex;
   flex-direction: column;
-  padding: 2.4rem 1.2rem;
-  border-right: 2px solid black;
+  padding: 2.4rem 2rem;
+  background-color: #f1f3f5;
+  border-radius: 15px;
+  margin: 1.2rem;
 }
 
 .heading-primary {
   font-size: 2.8rem;
   padding-bottom: 2.4rem;
+}
+
+.navigation-menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .search-container {
@@ -71,28 +78,49 @@ html {
 .button-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 2.4rem 0;
   gap: 0.8rem;
 }
 
 .btn {
-  width: 70%;
-
-  padding: 0.4rem 1.2rem;
+  display: inline-block;
+  width: 40%;
+  padding: 0.4rem 0;
   font-size: 1.4rem;
+  font-weight: 500;
   font-family: inherit;
   text-align: left;
-  background-color: #fff;
+  background-color: #f1f3f5;
   color: #343a40;
   border-radius: 10px;
   border: none;
-  background-color: #e5dbff;
 }
 
 .btn-icon {
   font-size: 1.4rem;
   padding-right: 0.4rem;
+}
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #868e96;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+  background-color: #868e96;
 }
 
 .notes-area {
@@ -106,18 +134,35 @@ html {
   align-content: flex-start;
   justify-content: start;
   overflow-y: auto;
-  max-height: calc(100vh - 4.8rem);
+  max-height: 100vh;
 }
 .single-note {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-wrap: pretty;
   width: 30rem;
   max-height: 32rem;
   padding: 2.8rem;
-  background-color: #d0ebff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  overflow-wrap: break-word;
+  border-radius: 15px;
 }
 
 .heading-secondary {
   font-size: 2.8rem;
-  padding-bottom: 1.2rem;
+}
+
+.note-date {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #e9ecef;
+  padding: 0 0.4rem;
+  border-radius: 15px;
+
+  margin-bottom: 1.2rem;
 }
 
 .note-text {
@@ -143,9 +188,10 @@ html {
 .modal-content {
   position: relative;
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px;
-  width: 50%;
+  width: 40rem;
+  border-radius: 15px;
 }
 
 .form-field {
@@ -166,7 +212,7 @@ form label {
 }
 
 form input {
-  width: 50%;
+  width: 80%;
   padding: 0.5rem 1.2rem;
   font-family: inherit;
   font-size: 1.4rem;
@@ -182,7 +228,7 @@ form input:focus {
 }
 
 form textarea {
-  width: 50%;
+  width: 80%;
   padding: 0.5rem 1.2rem;
   font-family: inherit;
   font-size: 1.4rem;
