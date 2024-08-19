@@ -23,7 +23,12 @@ window.onclick = function (e) {
 
 noteForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("Form submission prevented");
+
+  let now = new Date();
+
+  let formattedDate = now.toLocaleDateString("en-GB");
+  let formattedTime = now.toLocaleTimeString("en-GB");
+
   const noteTitle = document.querySelector("#note-title").value;
   const noteText = document.querySelector("#note-text").value;
 
@@ -32,17 +37,21 @@ noteForm.addEventListener("submit", function (e) {
 
   let newNote = document.createElement("div");
   let newNoteTitle = document.createElement("h2");
+  let newDate = document.createElement("span");
   let newNoteContent = document.createElement("p");
 
   newNote.classList.add("single-note");
   newNoteTitle.classList.add("heading-secondary");
+  newDate.classList.add("note-date");
   newNoteContent.classList.add("note-text");
 
   newNoteTitle.textContent = noteTitle;
   newNoteContent.textContent = noteText;
+  newDate.textContent = `${formattedDate} ${formattedTime}`;
 
   newNote.appendChild(newNoteTitle);
-  newNoteTitle.insertAdjacentElement("afterend", newNoteContent);
+  newNoteTitle.insertAdjacentElement("afterend", newDate);
+  newDate.insertAdjacentElement("afterend", newNoteContent);
   noteContainer.appendChild(newNote);
 
   modalWindow.style.display = "none";

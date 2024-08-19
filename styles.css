@@ -130,7 +130,7 @@ html {
   flex-wrap: wrap;
 
   gap: 2.4rem;
-  padding: 2.4rem;
+  margin: 1.2rem;
   align-content: flex-start;
   justify-content: start;
   overflow-y: auto;
